@@ -1,0 +1,15 @@
+.footer-clean{
+    background-color: rgb(126, 209, 18);
+    color: blanchedalmond;
+    text-decoration: none;
+}
+ul.dot {
+    list-style-type: none;
+    text-decoration: none;
+}
+.link{
+    text-decoration: none; 
+}
+.item{
+    margin: 10px;
+}
