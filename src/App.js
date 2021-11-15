@@ -14,6 +14,7 @@ import Registation from './components/registation/Registation';
 import Service from './components/product/Product';
 import AuthProvider from './contex/authProvider';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import Product from './components/product/Product';
 
 
 
@@ -30,8 +31,8 @@ function App() {
   <Route exact path='/home'>
     <Home></Home>
   </Route>
-  <PrivateRoute path='/service'>
-              <Service></Service>
+  <PrivateRoute path='/product'>
+             <Product/>
             </PrivateRoute>
             <PrivateRoute path='/addProduct'>
               <AddProduct></AddProduct>

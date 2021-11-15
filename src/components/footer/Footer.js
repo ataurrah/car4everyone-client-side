@@ -11,17 +11,22 @@ const Footer = () => {
                     <div className="col-sm-4 col-md-3 item">
                         <h3>Top Brand</h3>
                         <ul className='dot'>
-                            <li><Link className="link" to="/">BMW</Link></li>
-                            <li><Link className="link" to="/">TOYOTA</Link></li>
-                            <li><Link className="link" to="/">HONDA </Link></li>
-                            <li><Link className="link" to="/">NISSAN </Link></li>
+                            <li><Link className="link" to="/product">BMW</Link></li>
+                            <li><Link className="link" to="/product">TOYOTA</Link></li>
+                            <li><Link className="link" to="/product">HONDA </Link></li>
+                            <li><Link className="link" to="/product">NISSAN </Link></li>
                         </ul>
                     </div>
                     <div className="col-sm-4 col-md-3 item">
                         <h3>About</h3>
                         <ul className='dot'>
-                            <li><Link className="link" to="/">BANGLADESH TOURISM</Link></li>
-                            <li><Link className="link" to="/">VISIT BD</Link></li>
+                            <li><Link className="link" to="/product">top brand car</Link></li>
+                            <li><Link className="link" to="/">Privacy Policy</Link></li>
+                            <li><Link className="link" to="/Advertising"></Link></li>
+                            <li><Link className="link" to="/">Promotion</Link></li>
+                            <li><Link className="link" to="/">Terms & Conditions</Link></li>
+                            <li><Link className="link" to="/">Promotion</Link></li>
+                            <li><Link className="link" to="/">Contact</Link></li>
                         </ul>
                     </div>
                     <div className="col-sm-4 col-md-3 item">
@@ -42,7 +47,13 @@ const Footer = () => {
                         <Link to="/">
                         <i className="fab fa-snapchat mx-3"></i>
                             </Link>
-                        <p className="copyright">VISITBD © 2021</p>
+                        <Link to="/">
+                         <i className="fab fa-instagram mx-3"></i>
+                            </Link>
+                        <Link to="/">
+                        <i className="fab fa-youtube mx-3"></i>
+                            </Link>
+                        <p className="copyright">Care4Everyone © 2021</p>
                     </div>
                 </div>
             </div>

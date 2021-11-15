@@ -5,8 +5,9 @@ import useAuth from '../../hooks/useAuth';
 import './speical.css'
 
 const Special = (props) => {
-    const { ProductName,shoreTitle,
-        img,_id } = props.product
+    const { productName
+        ,shoreTitle,
+        img,_id,price } = props.product
     console.log(props);
  
     return (
@@ -15,10 +16,11 @@ const Special = (props) => {
                 <Card className="card-style">
                     <Card.Img className='card-image' variant="top w-100" src={img} />
                     <Card.Body>
-                        <Card.Title>{ProductName}</Card.Title>
+                        <Card.Title>{productName}</Card.Title>
                         <p>{shoreTitle.slice(0,25)}...</p>
+                        <p>price: ${price}</p>
                    <Link to={`/details/${_id}`}>
-                   <button className='bg-primary text-white'>Booking Now</button>
+                   <button className='bg-primary text-white'>Buy Now</button>
                    
                    </Link>
                        

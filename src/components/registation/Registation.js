@@ -18,7 +18,7 @@ const Registation = () => {
         .then(res=>{
           
             alert("Your are succesfuly REgister pleas login")
-            saveUser(name,email,"post")
+            saveUser(email,name,"post")
             updateName(name)
             history.push("/login")
             

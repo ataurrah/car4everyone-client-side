@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 // import "./details.css"
 const Details = () => {
     const [serviceDetails, setServiceDetails] = useState([])
@@ -43,6 +45,7 @@ const Details = () => {
 
     return (
         <div>
+            <Header/>
             <div className="row row-cols-sm-1 col-12 row-cols-md-2 g-4">
                 <div className="col">
                     <img src={serviceDetails.img} className='ps-1 w-100' alt="" />
@@ -68,7 +71,7 @@ const Details = () => {
             </div>
 
 
-
+<Footer/>
         </div>
     );
 };

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
+import Footer from '../footer/Footer';
+import Header from '../header/Header';
 import Special from '../special/Special';
 
 
@@ -14,9 +16,10 @@ const Product = () => {
 
     return (
         <div>
+            <Header/>
             <div>
-                <h3 className='bg-primary text-center text-white p-3'>Our Populer products</h3>
-                <h1>total product{product.length}</h1>
+                <h3 className=' text-center my-3 p-3'>Our Populer products</h3>
+                <h5>total product:{product.length}</h5>
                 <Row xs={1} md={3} lg={4} className="g-4 ms-3">
                     {
                         product.map(product => <Special
@@ -26,7 +29,7 @@ const Product = () => {
                 </Row>
             </div>
 
-
+<Footer/>
         </div>
     );
 };

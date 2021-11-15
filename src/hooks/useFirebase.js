@@ -84,7 +84,8 @@ const updateName = (name) => {
        setIsLoading,
        saveUser,
        setAdmin,
-       updateName
+       updateName,
+       admin
 
    }
 }

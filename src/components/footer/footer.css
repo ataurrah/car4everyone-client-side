@@ -1,6 +1,6 @@
 .footer-clean{
-    background-color: rgb(126, 209, 18);
-    color: blanchedalmond;
+   
+    color: rgb(61, 95, 47);
     text-decoration: none;
 }
 ul.dot {
@@ -11,5 +11,5 @@ ul.dot {
     text-decoration: none; 
 }
 .item{
-    margin: 10px;
+    margin: 20px;
 }

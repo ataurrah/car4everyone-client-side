@@ -1,7 +1,7 @@
 import React from 'react';
 import pic1 from './pic1.jpg'
 import pic2 from './pic 2.jpg'
-import pic3 from './pic 3.jpg'
+import pic3 from './pic 44.jpg'
 import { Link } from 'react-router-dom';
 import './carsol.css'
 const Carosol = () => {
@@ -15,25 +15,25 @@ const Carosol = () => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={pic1} className="d-block img w-100" alt="..."/>
+      <img src={pic2} className="d-block img w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-      <h3 className='bg-primary text-white'>New car sales in Bangladesh: looking offline, buying online</h3>
-     <Link to='/service'><button className='bg-primary text-white'>Read more</button></Link>
+      <h3 >New car sales in Bangladesh</h3>
+      <h4>looking offline, buying online</h4>
+     <Link to='/product'><button className='bg-primary text-white'>Read more</button></Link>
       </div>
     </div>
     <div className="carousel-item">
-      <img src={pic2} className="d-block img  w-100" alt="..."/>
+      <img src={pic1} className="d-block img  w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-      <h3  >Find your next car with us</h3>
-      <p>Leading online automotive marketplace in Bangladesh</p>
-      <Link to='/service'><button className='bg-primary text-white'>Read more</button></Link>
+      <h3 >Find your next car with us</h3>
+      <h4 >Leading online automotive marketplace in Bangladesh</h4>
+      <Link to='/product'><button className='bg-primary text-white'>Read more</button></Link>
       </div>
     </div>
     <div className="carousel-item">
       <img src={pic3}  className="d-block  img img-fluid w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h3 className='text-danger'>Explore  BANGLADESH </h3>
-        <Link to='/service'><button className='bg-primary text-white'>Read more</button></Link>
+       
       </div>
     </div>
   </div>

@@ -7,6 +7,7 @@ import Header from '../header/Header';
 import Special from '../special/Special';
 
 import Spare from './spare/Spare';
+import Topbrand from './topbrand/Topbrand';
 
 
 const Home = () => {
@@ -27,7 +28,7 @@ const Home = () => {
 
 
             <div>
-                <h3 className='bg-primary text-center text-white p-3'>Most recent cars for sale in Bangladesh</h3>
+                <h3 className=' text-center text-success my-3'>Most recent cars for sale in Bangladesh</h3>
                 <Row xs={1} md={3} lg={4} className="g-4 ms-3">
                     {
                         product.map(product => <Special
@@ -41,7 +42,7 @@ const Home = () => {
 </div>
 
             <div>
-            
+            <Topbrand/>
             </div>
 
 

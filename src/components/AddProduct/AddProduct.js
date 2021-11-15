@@ -1,6 +1,8 @@
 // import { stringify } from '@firebase/util';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Footer from '../footer/Footer';
+import Header from '../header/Header';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -21,22 +23,24 @@ const AddProduct = () => {
     };
 
     return (
-        <div className="container">
+        <div>
+            <Header/>
             <div className="row row-cols-sm-1 col-12 row-cols-md-2 g-4">
                 <div className="col">
                    
                 
 
                 </div>
-                <div className="col mt-5 mb-5 border my-2">
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <input placeholder="place Name" {...register("productName")} /> <br /> <br />
+                <div className="col">
+                    <h3>ADD PRODUCT</h3>
+                    <form className=" my-3 bg-success" onSubmit={handleSubmit(onSubmit)}>
+                        <input className=" mt-5" placeholder="Product Name" {...register("productName")} /> <br /> <br />
                         <input placeholder="short Title" {...register("shoreTitle")} /> <br /> <br />
                         <input placeholder="Description" {...register("Description")} /> <br /> <br />
-                        <input placeholder="cost" {...register("price")} /> <br /> <br />
+                        <input placeholder="$ price" {...register("price")} /> <br /> <br />
                         <input placeholder="img url" {...register("img")} /> <br /> <br />
 
-                        <input type="submit" />
+                        <input className=" mb-3" type="submit" />
                     </form>
 
 
@@ -44,7 +48,7 @@ const AddProduct = () => {
             </div>
 
 
-
+<Footer></Footer>
         </div>
     );
 };
