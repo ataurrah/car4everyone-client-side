@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 import pic1 from './pic 3.jpg'
 const Topbrand = () => {
     return (
-        <div>
-            <h3>Top car brand</h3>
+        <div className='my-5'>
+            <h3 className='my-5 text-success' >Top car brand</h3>
  
             <NavLink  to="/product"> <img src={pic1} className="d-block img w-100 h-20" alt="..."/></NavLink>
 

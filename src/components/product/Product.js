@@ -8,7 +8,7 @@ import Special from '../special/Special';
 const Product = () => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://murmuring-inlet-82514.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProduct(data))
     }
@@ -16,7 +16,7 @@ const Product = () => {
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div>
                 <h3 className=' text-center my-3 p-3'>Our Populer products</h3>
                 <h5>total product:{product.length}</h5>
@@ -29,7 +29,7 @@ const Product = () => {
                 </Row>
             </div>
 
-<Footer/>
+            <Footer />
         </div>
     );
 };

@@ -5,23 +5,23 @@ const MakeAdmin = () => {
     const hanldeEmail = (e) => {
         e.preventDefault()
         setAdminEmail(e.target.value)
-        e.target.value=""
+        e.target.value = ""
 
     }
     const handlSubmit = (e) => {
         const user = { adminEmail }
-        fetch(`http://localhost:5000/users/admin`, {
+        fetch(`https://murmuring-inlet-82514.herokuapp.com/users/admin`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(user)
 
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.acknowledged){
-               alert("add successfully")
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    alert("add successfully")
+                }
+            })
         e.preventDefault()
     }
     return (

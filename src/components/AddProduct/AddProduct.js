@@ -1,13 +1,13 @@
 // import { stringify } from '@firebase/util';
 import React from 'react';
 import { useForm } from "react-hook-form";
-import Footer from '../footer/Footer';
+
 import Header from '../header/Header';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch("http://localhost:5000/products", {
+        fetch("https://murmuring-inlet-82514.herokuapp.com/products", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -24,11 +24,11 @@ const AddProduct = () => {
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div className="row row-cols-sm-1 col-12 row-cols-md-2 g-4">
                 <div className="col">
-                   
-                
+
+
 
                 </div>
                 <div className="col">
@@ -48,7 +48,7 @@ const AddProduct = () => {
             </div>
 
 
-<Footer></Footer>
+
         </div>
     );
 };

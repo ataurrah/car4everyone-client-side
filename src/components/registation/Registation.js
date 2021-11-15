@@ -8,13 +8,13 @@ const Registation = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const {register,setUser,saveUser,setAdmin,user,updateName
+    const {registration,setUser,saveUser,setAdmin,user,updateName
     }=useAuth();
 
 
     const manulayRegister = (e)=>{
         e.preventDefault()
-        register(email,password)
+        registration(email,password)
         .then(res=>{
           
             alert("Your are succesfuly REgister pleas login")

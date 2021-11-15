@@ -4,7 +4,7 @@ const ManageAllData = () => {
 
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://murmuring-inlet-82514.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
 
@@ -13,7 +13,7 @@ const ManageAllData = () => {
     const handleDelete = id => {
         const permition = window.confirm("are you want to delete?")
         if (permition) {
-            fetch(`http://localhost:5000/orders/${id}`, { method: "delete" })
+            fetch(`https://murmuring-inlet-82514.herokuapp.com/orders/${id}`, { method: "delete" })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
@@ -29,7 +29,7 @@ const ManageAllData = () => {
     const handleApproved = id => {
         alert(id)
 
-        fetch(`http://localhost:5000/orders/${id}`, { method: "put" })
+        fetch(`https://murmuring-inlet-82514.herokuapp.com/orders/${id}`, { method: "put" })
 
 
 

@@ -5,15 +5,16 @@ import Footer from '../footer/Footer';
 import Header from '../header/Header';
 
 import Special from '../special/Special';
+import Showreview from './showreview/Showreview';
 
-import Spare from './spare/Spare';
+
 import Topbrand from './topbrand/Topbrand';
 
 
 const Home = () => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://murmuring-inlet-82514.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProduct(data))
     }
@@ -23,7 +24,7 @@ const Home = () => {
 
     return (
         <div>
-            <Header/>
+            <Header />
             <Carosol />
 
 
@@ -37,21 +38,22 @@ const Home = () => {
                     }
                 </Row>
             </div>
-<div>
-    <Spare></Spare>
-</div>
 
             <div>
-            <Topbrand/>
+               
             </div>
 
+            <div>
+                <Topbrand />
+            </div>
+
+            <Showreview />
 
 
 
 
 
-
-<Footer/>
+            <Footer />
         </div>
     );
 };

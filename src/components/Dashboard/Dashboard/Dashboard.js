@@ -20,13 +20,15 @@ import Pay from '../Pay/Pay';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../../header/Header';
+import userEvent from '@testing-library/user-event';
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const {admin}=useAuth()
+    const {admin,user}=useAuth()
+
     return (
         <div>
           <div  >
-            <Header/>
+          
           </div >
             <SideNav className='mt-5 dash'
     onSelect={(selected) => {
@@ -35,8 +37,13 @@ const Dashboard = () => {
 >
     <SideNav.Toggle />
     <SideNav.Nav defaultSelected="Admin">
+    <NavItem eventKey="Home">
+            <NavText>
+            <Link to="/home" className="deco"> home</Link>
+            </NavText>
+        </NavItem>
         {
-            admin?
+            admin && user.email?
             <>
               <NavItem eventKey="AddProduct">
             <NavText>

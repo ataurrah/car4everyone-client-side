@@ -11,7 +11,7 @@ const Details = () => {
     const { id } = useParams()
     const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
-        let url = `http://localhost:5000/products/${id}`
+        let url = `https://murmuring-inlet-82514.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setServiceDetails(data))
@@ -28,7 +28,7 @@ const Details = () => {
             approved: "pending"
         }
         console.log(newData)
-        fetch("http://localhost:5000/orders", {
+        fetch("https://murmuring-inlet-82514.herokuapp.com/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -45,7 +45,7 @@ const Details = () => {
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div className="row row-cols-sm-1 col-12 row-cols-md-2 g-4">
                 <div className="col">
                     <img src={serviceDetails.img} className='ps-1 w-100' alt="" />
@@ -71,7 +71,7 @@ const Details = () => {
             </div>
 
 
-<Footer/>
+            <Footer />
         </div>
     );
 };

@@ -6,14 +6,14 @@ const MyOrders = () => {
     const email = user.email
     const [myOrders, setMyOrders] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${email}`)
+        fetch(`https://murmuring-inlet-82514.herokuapp.com/orders/${email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [user.email])
     const handleDelete = id => {
         const permition = window.confirm("are you want to delete?")
         if (permition) {
-            fetch(`http://localhost:5000/orders/${id}`, { method: "delete" })
+            fetch(`https://murmuring-inlet-82514.herokuapp.com/orders/${id}`, { method: "delete" })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
